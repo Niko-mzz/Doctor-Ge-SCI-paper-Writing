@@ -1,8 +1,8 @@
-# SCI 写作 Skills 一键安装器
+# Doctor Ge SCI-paper-Writing
 
-这个目录把《Codex SCI 论文写作 Skills 分类》中的**公开下载方式**集中到一起。安装器不会把上游 Skill 源码复制进本仓库，而是在用户执行时从原作者的 GitHub 仓库获取，便于追溯来源和更新。
+《Codex SCI 论文写作 Skills》配套的一键安装仓库。Word 文档中的 **22 个 Skills 已全部纳入安装器**：其中 12 个随本仓库提供，10 个在安装时从原作者的公开 GitHub 仓库获取。
 
-## 一键安装
+## 一键安装全部 22 个 Skills
 
 ### Windows PowerShell
 
@@ -10,7 +10,7 @@
 irm https://raw.githubusercontent.com/Niko-mzz/Doctor-Ge-SCI-paper-Writing/main/install.ps1 | iex
 ```
 
-如需覆盖已有同名 Skill：
+覆盖已有同名 Skill：
 
 ```powershell
 & ([scriptblock]::Create((irm https://raw.githubusercontent.com/Niko-mzz/Doctor-Ge-SCI-paper-Writing/main/install.ps1))) -Force
@@ -30,44 +30,39 @@ curl -fsSL https://raw.githubusercontent.com/Niko-mzz/Doctor-Ge-SCI-paper-Writin
 
 默认安装到 `~/.codex/skills`。安装完成后重启 Codex。
 
-## 会自动安装的 10 个公开 Skills
+## Word 文档中的全部 Skills
 
-| 分类 | Skill | 上游仓库 |
-|---|---|---|
-| 文献综述 | `literature-review` | `K-Dense-AI/scientific-agent-skills` |
-| 系统综述 | `systematic-literature-review` | `bytedance/deer-flow` |
-| 论文检索 | `paper-lookup` | `K-Dense-AI/scientific-agent-skills` |
-| 单篇论文理解 | `academic-paper-review` | `bytedance/deer-flow` |
-| 科学批判性思维 | `scientific-critical-thinking` | `K-Dense-AI/scientific-agent-skills` |
-| 论文绘图 | `academic-plotting` | `Orchestra-Research/AI-Research-SKILLs` |
-| 统计分析 | `statistical-analysis` | `K-Dense-AI/scientific-agent-skills` |
-| 科学写作 | `scientific-writing` | `K-Dense-AI/scientific-agent-skills` |
-| 同行评审 | `peer-review` | `K-Dense-AI/scientific-agent-skills` |
-| 投稿准备度评估 | `scholar-evaluation` | `K-Dense-AI/scientific-agent-skills` |
-
-## 不会自动下载的项目
-
-以下名称来自功能规划或本地定制，目前没有在清单中确认到可直接复用的公开上游 `SKILL.md`，因此安装器会明确跳过，而不会用同名文件冒充：
-
-- `citation-verification`
-- `reference-management`
-- `exemplar-paper-analysis`
-- `writing-pattern-extraction`
-- `imitation-writing-practice`
-- `scientific-data-analysis`
-- `paper-figure`
-- `paper-writing`
-- `academic-language-polishing`
-- `journal-selection`
-- `submission-and-peer-review`
-
-`documents` 由 Codex 桌面版/运行时提供，不作为普通 GitHub Skill 下载。
+| 序号 | Skill | 主要用途 | 安装来源 |
+|---:|---|---|---|
+| 1 | `literature-review` | 文献检索、筛选与综述 | K-Dense |
+| 2 | `citation-verification` | 核验引用真实性与论述对应关系 | 本仓库 |
+| 3 | `reference-management` | 整理、去重和转换参考文献 | 本仓库 |
+| 4 | `systematic-literature-review` | 系统综述与统一引用 | DeerFlow |
+| 5 | `paper-lookup` | 查找论文与元数据 | K-Dense |
+| 6 | `academic-paper-review` | 阅读并解析单篇论文 | DeerFlow |
+| 7 | `scientific-critical-thinking` | 评估证据、论证与研究局限 | K-Dense |
+| 8 | `exemplar-paper-analysis` | 拆解范文结构和写作策略 | 本仓库 |
+| 9 | `writing-pattern-extraction` | 提取可迁移的论文写作模式 | 本仓库 |
+| 10 | `imitation-writing-practice` | 基于范文练习科研表达 | 本仓库 |
+| 11 | `scientific-data-analysis` | 清洗、分析实验数据并记录流程 | 本仓库 |
+| 12 | `academic-plotting` | 生成论文级科研图表 | Orchestra Research |
+| 13 | `paper-figure` | 创建、优化和检查 SCI 论文图片 | 本仓库 |
+| 14 | `statistical-analysis` | 统计检验、效应量与功效分析 | K-Dense |
+| 15 | `paper-writing` | SCI/EI 论文撰写与修订 | 本仓库 |
+| 16 | `academic-language-polishing` | 学术语言润色与术语统一 | 本仓库 |
+| 17 | `scientific-writing` | 科学论文结构化写作 | K-Dense |
+| 18 | `documents` | 创建、编辑和检查 Word 文档 | 本仓库 |
+| 19 | `journal-selection` | 期刊匹配和候选排序 | 本仓库 |
+| 20 | `submission-and-peer-review` | 投稿材料与审稿回复准备 | 本仓库 |
+| 21 | `peer-review` | 模拟同行评审并提出修改意见 | K-Dense |
+| 22 | `scholar-evaluation` | 评估论文与投稿准备度 | K-Dense |
 
 完整机器可读清单见 [`skills-manifest.json`](./skills-manifest.json)。
 
-## 安全与来源
+## 安装器行为
 
-- 安装前可以先打开 `install.ps1` 或 `install.sh` 审查。
-- 安装器使用 Git 稀疏检出，只复制目标 Skill 目录，不克隆无关大文件到安装目录。
-- 每个 Skill 的许可证和依赖以其上游仓库中的文件为准。
-- 本仓库只聚合安装方式，不宣称拥有上游 Skill 的版权。
+- 需要本机已安装 `Git`。
+- 默认保留已经存在的同名 Skill；使用 `-Force` 或 `--force` 才会覆盖。
+- 使用 Git 稀疏检出，只获取所需 Skill 目录。
+- 每个复制到目标目录的 Skill 都必须包含 `SKILL.md`，否则安装立即报错。
+- 上游项目的许可证与使用条件以各自仓库为准。
