@@ -1,0 +1,4 @@
+interface:
+  display_name: "Exemplar Paper Analysis"
+  short_description: "Learn structure from exemplary papers"
+  default_prompt: "Analyze these exemplar papers and extract reusable structural patterns."
