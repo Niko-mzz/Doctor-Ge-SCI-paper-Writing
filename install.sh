@@ -8,18 +8,21 @@ while [[ $# -gt 0 ]]; do
   case "$1" in
     --destination) DESTINATION="$2"; shift 2 ;;
     --force) FORCE=1; shift ;;
-    *) echo "未知参数: $1" >&2; exit 2 ;;
+    *) echo "未知参数：$1" >&2; exit 2 ;;
   esac
 done
 
-command -v git >/dev/null 2>&1 || { echo "未找到 git，请先安装 Git。" >&2; exit 1; }
+command -v git >/dev/null 2>&1 || { echo "未找到 Git，请先安装 Git。" >&2; exit 1; }
 mkdir -p "$DESTINATION"
 TMP_ROOT="$(mktemp -d)"
 trap 'rm -rf "$TMP_ROOT"' EXIT
+READY=0
+GROUP_INDEX=0
 
 install_group() {
   local repo="$1"; shift
-  local checkout="$TMP_ROOT/$(basename "$repo" .git)"
+  local checkout="$TMP_ROOT/repo-$GROUP_INDEX"
+  GROUP_INDEX=$((GROUP_INDEX + 1))
   echo ""
   echo "获取 $repo"
   git clone --depth 1 --filter=blob:none --sparse "$repo" "$checkout"
@@ -35,18 +38,35 @@ install_group() {
     local source="$checkout/$path"
     local target="$DESTINATION/$name"
     if [[ ! -f "$source/SKILL.md" ]]; then
-      echo "警告：上游路径不存在，跳过 $name" >&2
-      continue
+      echo "缺少 SKILL.md：$name（$path）" >&2
+      exit 1
     fi
     if [[ -e "$target" && "$FORCE" -ne 1 ]]; then
-      echo "跳过已存在：$name（使用 --force 可覆盖）"
+      echo "已存在，保留：$name"
+      READY=$((READY + 1))
       continue
     fi
     [[ -e "$target" ]] && rm -rf "$target"
     cp -R "$source" "$target"
+    [[ -f "$target/SKILL.md" ]] || { echo "安装校验失败：$name" >&2; exit 1; }
+    READY=$((READY + 1))
     echo "已安装：$name"
   done
 }
+
+install_group "https://github.com/Niko-mzz/Doctor-Ge-SCI-paper-Writing.git" \
+  "skills/citation-verification::citation-verification" \
+  "skills/reference-management::reference-management" \
+  "skills/exemplar-paper-analysis::exemplar-paper-analysis" \
+  "skills/writing-pattern-extraction::writing-pattern-extraction" \
+  "skills/imitation-writing-practice::imitation-writing-practice" \
+  "skills/scientific-data-analysis::scientific-data-analysis" \
+  "skills/paper-figure::paper-figure" \
+  "skills/paper-writing::paper-writing" \
+  "skills/academic-language-polishing::academic-language-polishing" \
+  "skills/documents::documents" \
+  "skills/journal-selection::journal-selection" \
+  "skills/submission-and-peer-review::submission-and-peer-review"
 
 install_group "https://github.com/K-Dense-AI/scientific-agent-skills.git" \
   "skills/literature-review::literature-review" \
@@ -64,7 +84,8 @@ install_group "https://github.com/bytedance/deer-flow.git" \
 install_group "https://github.com/Orchestra-Research/AI-Research-SKILLs.git" \
   "20-ml-paper-writing/academic-plotting::academic-plotting"
 
+[[ "$READY" -eq 22 ]] || { echo "安装未完成：当前就绪 $READY/22 个 Skills。" >&2; exit 1; }
 echo ""
-echo "完成。请重启 Codex 以加载新 Skills。"
+echo "完成：Word 文档中的 22/22 个 Skills 均已就绪。"
 echo "安装目录：$DESTINATION"
-echo "注意：清单中没有已验证公开来源的规划型 Skill 不会被本脚本安装。"
+echo "请重启 Codex 以加载新 Skills。"
