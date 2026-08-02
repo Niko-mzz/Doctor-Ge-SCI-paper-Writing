@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scientific Data Analysis"
+  short_description: "Analyze research data reproducibly"
+  default_prompt: "Analyze these experimental data and produce a reproducible evidence summary."
