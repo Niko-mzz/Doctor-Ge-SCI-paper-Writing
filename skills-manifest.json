@@ -1,0 +1,40 @@
+{
+  "name": "sci-writing-skills-installer",
+  "version": "1.0.0",
+  "generated_at": "2026-08-02",
+  "default_destination": "~/.codex/skills",
+  "summary": {
+    "total_in_document": 22,
+    "public_installable": 10,
+    "codex_bundled": 1,
+    "planned_or_no_verified_upstream": 11
+  },
+  "public_installable": [
+    {"name":"literature-review","repo":"K-Dense-AI/scientific-agent-skills","path":"skills/literature-review"},
+    {"name":"systematic-literature-review","repo":"bytedance/deer-flow","path":"skills/public/systematic-literature-review"},
+    {"name":"paper-lookup","repo":"K-Dense-AI/scientific-agent-skills","path":"skills/paper-lookup"},
+    {"name":"academic-paper-review","repo":"bytedance/deer-flow","path":"skills/public/academic-paper-review"},
+    {"name":"scientific-critical-thinking","repo":"K-Dense-AI/scientific-agent-skills","path":"skills/scientific-critical-thinking"},
+    {"name":"academic-plotting","repo":"Orchestra-Research/AI-Research-SKILLs","path":"20-ml-paper-writing/academic-plotting"},
+    {"name":"statistical-analysis","repo":"K-Dense-AI/scientific-agent-skills","path":"skills/statistical-analysis"},
+    {"name":"scientific-writing","repo":"K-Dense-AI/scientific-agent-skills","path":"skills/scientific-writing"},
+    {"name":"peer-review","repo":"K-Dense-AI/scientific-agent-skills","path":"skills/peer-review"},
+    {"name":"scholar-evaluation","repo":"K-Dense-AI/scientific-agent-skills","path":"skills/scholar-evaluation"}
+  ],
+  "codex_bundled": [
+    {"name":"documents","note":"由 Codex 桌面版/运行时提供，不作为普通 GitHub Skill 下载。"}
+  ],
+  "planned_or_no_verified_upstream": [
+    "citation-verification",
+    "reference-management",
+    "exemplar-paper-analysis",
+    "writing-pattern-extraction",
+    "imitation-writing-practice",
+    "scientific-data-analysis",
+    "paper-figure",
+    "paper-writing",
+    "academic-language-polishing",
+    "journal-selection",
+    "submission-and-peer-review"
+  ]
+}
