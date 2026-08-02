@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reference Management"
+  short_description: "Organize and format scholarly references"
+  default_prompt: "Organize, deduplicate, and format the references for this paper."
