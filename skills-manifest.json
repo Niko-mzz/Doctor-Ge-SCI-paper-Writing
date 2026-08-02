@@ -5,122 +5,30 @@
   "default_destination": "~/.codex/skills",
   "summary": {
     "total_in_document": 22,
-    "one_click_installable": 22,
-    "bundled_in_this_repo": 12,
-    "public_upstream": 10
+    "one_click_installable": 22
   },
-  "bundled_in_this_repo": [
-    {
-      "name": "citation-verification",
-      "repo": "Niko-mzz/Doctor-Ge-SCI-paper-Writing",
-      "path": "skills/citation-verification"
-    },
-    {
-      "name": "reference-management",
-      "repo": "Niko-mzz/Doctor-Ge-SCI-paper-Writing",
-      "path": "skills/reference-management"
-    },
-    {
-      "name": "exemplar-paper-analysis",
-      "repo": "Niko-mzz/Doctor-Ge-SCI-paper-Writing",
-      "path": "skills/exemplar-paper-analysis"
-    },
-    {
-      "name": "writing-pattern-extraction",
-      "repo": "Niko-mzz/Doctor-Ge-SCI-paper-Writing",
-      "path": "skills/writing-pattern-extraction"
-    },
-    {
-      "name": "imitation-writing-practice",
-      "repo": "Niko-mzz/Doctor-Ge-SCI-paper-Writing",
-      "path": "skills/imitation-writing-practice"
-    },
-    {
-      "name": "scientific-data-analysis",
-      "repo": "Niko-mzz/Doctor-Ge-SCI-paper-Writing",
-      "path": "skills/scientific-data-analysis"
-    },
-    {
-      "name": "paper-figure",
-      "repo": "Niko-mzz/Doctor-Ge-SCI-paper-Writing",
-      "path": "skills/paper-figure"
-    },
-    {
-      "name": "paper-writing",
-      "repo": "Niko-mzz/Doctor-Ge-SCI-paper-Writing",
-      "path": "skills/paper-writing"
-    },
-    {
-      "name": "academic-language-polishing",
-      "repo": "Niko-mzz/Doctor-Ge-SCI-paper-Writing",
-      "path": "skills/academic-language-polishing"
-    },
-    {
-      "name": "documents",
-      "repo": "Niko-mzz/Doctor-Ge-SCI-paper-Writing",
-      "path": "skills/documents"
-    },
-    {
-      "name": "journal-selection",
-      "repo": "Niko-mzz/Doctor-Ge-SCI-paper-Writing",
-      "path": "skills/journal-selection"
-    },
-    {
-      "name": "submission-and-peer-review",
-      "repo": "Niko-mzz/Doctor-Ge-SCI-paper-Writing",
-      "path": "skills/submission-and-peer-review"
-    }
-  ],
-  "public_upstream": [
-    {
-      "name": "literature-review",
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/literature-review"
-    },
-    {
-      "name": "systematic-literature-review",
-      "repo": "bytedance/deer-flow",
-      "path": "skills/public/systematic-literature-review"
-    },
-    {
-      "name": "paper-lookup",
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/paper-lookup"
-    },
-    {
-      "name": "academic-paper-review",
-      "repo": "bytedance/deer-flow",
-      "path": "skills/public/academic-paper-review"
-    },
-    {
-      "name": "scientific-critical-thinking",
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/scientific-critical-thinking"
-    },
-    {
-      "name": "academic-plotting",
-      "repo": "Orchestra-Research/AI-Research-SKILLs",
-      "path": "20-ml-paper-writing/academic-plotting"
-    },
-    {
-      "name": "statistical-analysis",
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/statistical-analysis"
-    },
-    {
-      "name": "scientific-writing",
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/scientific-writing"
-    },
-    {
-      "name": "peer-review",
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/peer-review"
-    },
-    {
-      "name": "scholar-evaluation",
-      "repo": "K-Dense-AI/scientific-agent-skills",
-      "path": "skills/scholar-evaluation"
-    }
+  "skills": [
+    "literature-review",
+    "citation-verification",
+    "reference-management",
+    "systematic-literature-review",
+    "paper-lookup",
+    "academic-paper-review",
+    "scientific-critical-thinking",
+    "exemplar-paper-analysis",
+    "writing-pattern-extraction",
+    "imitation-writing-practice",
+    "scientific-data-analysis",
+    "academic-plotting",
+    "paper-figure",
+    "statistical-analysis",
+    "paper-writing",
+    "academic-language-polishing",
+    "scientific-writing",
+    "documents",
+    "journal-selection",
+    "submission-and-peer-review",
+    "peer-review",
+    "scholar-evaluation"
   ]
 }
