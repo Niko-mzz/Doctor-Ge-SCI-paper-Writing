@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing Pattern Extraction"
+  short_description: "Extract reusable academic writing patterns"
+  default_prompt: "Extract reusable rhetorical and paragraph patterns from these papers."
