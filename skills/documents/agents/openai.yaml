@@ -1,0 +1,4 @@
+interface:
+  display_name: "Documents"
+  short_description: "Create and verify DOCX manuscripts"
+  default_prompt: "Create or edit this Word manuscript and visually verify the final DOCX."
