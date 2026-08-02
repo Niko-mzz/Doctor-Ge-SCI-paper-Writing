@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Language Polishing"
+  short_description: "Polish academic English precisely"
+  default_prompt: "Polish this manuscript while preserving every scientific claim and value."
