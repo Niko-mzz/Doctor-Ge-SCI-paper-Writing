@@ -1,0 +1,4 @@
+interface:
+  display_name: "Citation Verification"
+  short_description: "Verify scholarly citations and evidence links"
+  default_prompt: "Verify every citation, DOI, and claim-to-source mapping in this manuscript."
