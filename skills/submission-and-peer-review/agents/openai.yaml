@@ -1,0 +1,4 @@
+interface:
+  display_name: "Submission and Peer Review"
+  short_description: "Prepare submission and revision materials"
+  default_prompt: "Prepare the submission package or organize the reviewer-response workflow."
