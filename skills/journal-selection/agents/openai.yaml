@@ -1,0 +1,4 @@
+interface:
+  display_name: "Journal Selection"
+  short_description: "Select suitable journals transparently"
+  default_prompt: "Rank suitable journals for this manuscript using current verified information."
