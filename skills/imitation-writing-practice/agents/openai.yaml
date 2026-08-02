@@ -1,0 +1,4 @@
+interface:
+  display_name: "Imitation Writing Practice"
+  short_description: "Practice writing from verified exemplars"
+  default_prompt: "Use my evidence to draft a practice section following the exemplars structure."
